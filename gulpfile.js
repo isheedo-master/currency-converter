@@ -32,7 +32,7 @@ gulp.task('minify', function() {
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
-    return gulp.src('source/js/*.js')
+    return gulp.src('source/js/**/*.js')
         .pipe(concat('app.js'))
         .pipe(gulp.dest('public/assets/'))
         .pipe(rename('app.min.js'))
