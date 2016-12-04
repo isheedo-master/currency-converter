@@ -1,0 +1,71 @@
+// topbar nav
+.app_header,
+.app_footer,
+#keyboard_wrapper ul{
+    background-color: $grey-base;
+    color: $white-base;
+}
+
+.app_header {
+    padding: 0 1rem;
+    .app_branding {
+        font-weight: $font-weight-light;
+        max-width: 30%;
+        width: 100%;
+        @extend %inline-block;
+    }
+}
+
+
+.app_nav {
+    @extend %inline-block;
+    max-width: 69%;
+    width: 100%;
+    text-align: right;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li {
+            margin: 0 0.6rem;
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+            border: 1px solid $white-base;
+            @extend %inline-block;
+            &.active{
+                background: $white-base;
+                color: $grey-base;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+       }
+   }
+}
+
+// keyboard nav
+#keyboard_wrapper ul,
+#input_wrapper{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#keyboard_wrapper {
+    ul {
+        li {
+            border: 1px solid $border-color-base;
+            text-align: center;
+            cursor: pointer;
+            padding: 2rem 0;
+            font-size: 1.3rem;
+            font-weight: $font-weight-light;
+            &:hover{
+                background-color: lighten($grey-base, 8%);
+            }
+            &:active{
+                border-color: $white-base;
+            }
+        }
+    }
+}

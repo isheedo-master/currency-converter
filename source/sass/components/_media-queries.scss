@@ -1,0 +1,38 @@
+@media screen and (max-width:$mobile-breakpoint) {
+    #input_wrapper {
+        display: block;
+        img {
+            margin-left: 1rem;
+        }
+        .input {
+            display: block;
+            max-width: 100%;
+            flex: none;
+            width: 100%;
+            padding-left: 0;
+            border {
+                left: none;
+                right: none;
+            }
+            &:first-child {
+                border-bottom: 1px solid $border-color-light;
+            }
+        }
+    }
+    .app_header {
+        .app_nav {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            bottom: 0;
+            background: $grey-base;
+            z-index: 1;
+            max-width: 250px;
+        }
+        .app_branding {
+            max-width: 100%;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    }
+}
