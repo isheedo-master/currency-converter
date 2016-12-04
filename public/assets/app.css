@@ -181,6 +181,10 @@ body {
   font-size: 16px;
   height: 100%; }
 
+.app_footer p {
+  margin: 0;
+  padding: 0.5rem 0; }
+
 #keyboard_wrapper ul,
 #input_wrapper {
   display: -ms-flexbox;
@@ -189,9 +193,9 @@ body {
   flex-flow: row wrap; }
 
 #keyboard_wrapper ul li {
-  -ms-flex: 0 0 calc(25% - 2px);
-  flex: 0 0 calc(25% - 2px);
-  max-width: calc(25% - 2px);
+  -ms-flex: 0 0 calc(25%);
+  flex: 0 0 calc(25%);
+  max-width: calc(25%);
   width: auto;
   float: none; }
 
@@ -224,8 +228,31 @@ body {
     top: 50%;
     transform: translateY(-50%); }
 
+#off_canvas_toggle {
+  position: absolute;
+  clip: rect(0, 0, 0, 0); }
+
+label[for="off_canvas_toggle"] {
+  display: none;
+  width: 40px;
+  height: 60px;
+  background: #1f3b50;
+  cursor: pointer;
+  position: absolute;
+  left: 1rem;
+  z-index: 1;
+  transition: 0.2s ease-in; }
+
+#toggle_icon {
+  width: 60%;
+  margin: auto;
+  height: 0;
+  display: block;
+  box-shadow: 0 10px 0 1px #ffffff, 0 18px 0 1px #ffffff, 0 26px 0 1px #ffffff;
+  position: relative;
+  top: 10px; }
+
 .app_header,
-.app_footer,
 #keyboard_wrapper ul {
   background-color: #1f3b50;
   color: #ffffff; }
@@ -263,7 +290,7 @@ body {
   padding: 0; }
 
 #keyboard_wrapper ul li {
-  border: 1px solid #132533;
+  box-shadow: 0 0 0 1px #1b3549;
   text-align: center;
   cursor: pointer;
   padding: 2rem 0;
@@ -272,7 +299,29 @@ body {
   #keyboard_wrapper ul li:hover {
     background-color: #2a516d; }
   #keyboard_wrapper ul li:active {
-    border-color: #ffffff; }
+    background-color: #264962; }
+
+.app_body,
+.app_header,
+.app_footer {
+  position: relative;
+  transition: 0.2s ease-in;
+  left: 0; }
+
+#off_canvas_toggle:checked {
+  left: 250px;
+  transition: 0.2s ease-in; }
+  #off_canvas_toggle:checked ~ .app_body,
+  #off_canvas_toggle:checked ~ .app_header,
+  #off_canvas_toggle:checked ~ .app_footer,
+  #off_canvas_toggle:checked ~ label {
+    left: 250px;
+    transition: 0.2s ease-in; }
+  #off_canvas_toggle:checked ~ label {
+    left: calc(250px + 1rem); }
+  #off_canvas_toggle:checked ~ .app_header .app_nav {
+    left: 0;
+    transition: 0.2s ease-in; }
 
 @media screen and (max-width: 768px) {
   #input_wrapper {
@@ -292,17 +341,40 @@ body {
       #input_wrapper .input:first-child {
         border-bottom: 1px solid #cfcfcf; }
   .app_header .app_nav {
+    background: #161616;
     position: fixed;
     top: 0;
     left: -250px;
     bottom: 0;
-    background: #1f3b50;
     z-index: 1;
-    max-width: 250px; }
+    max-width: 250px;
+    transition: 0.2s ease-in; }
   .app_header .app_branding {
     max-width: 100%;
     text-align: center;
-    font-size: 1.5rem; } }
+    font-size: 1.5rem; }
+  #nav_pills:before {
+    content: 'SETTINGS';
+    display: block;
+    text-align: left;
+    padding: 1.3rem 0;
+    text-indent: 1rem; }
+  #nav_pills li {
+    display: block;
+    margin: 0;
+    text-align: left;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    padding: 1.285rem 0;
+    border-top: 0;
+    border-bottom: 1px solid rgba(187, 187, 187, 0.12);
+    text-indent: 1rem; }
+    #nav_pills li.active {
+      background-color: #1f3b50;
+      color: #ffffff; }
+  label[for="off_canvas_toggle"] {
+    display: block; } }
 
 .text_center {
   text-align: center; }

@@ -1,6 +1,32 @@
 // topbar nav
+#off_canvas_toggle {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+label[for="off_canvas_toggle"] {
+    display: none;
+    width: 40px;
+    height: 60px;
+    background: #1f3b50;
+    cursor: pointer;
+    position: absolute;
+    left: 1rem;
+    z-index: 1;
+    transition: 0.2s ease-in;
+}
+
+#toggle_icon {
+    width: 60%;
+    margin: auto;
+    height: 0;
+    display: block;
+    box-shadow: 0 10px 0 1px $white-base, 0 18px 0 1px $white-base, 0 26px 0 1px $white-base;
+    position: relative;
+    top: 10px;
+}
+
 .app_header,
-.app_footer,
 #keyboard_wrapper ul{
     background-color: $grey-base;
     color: $white-base;
@@ -54,7 +80,7 @@
 #keyboard_wrapper {
     ul {
         li {
-            border: 1px solid $border-color-base;
+            box-shadow: 0 0 0 1px lighten($border-color-base, 6%);
             text-align: center;
             cursor: pointer;
             padding: 2rem 0;
@@ -64,8 +90,35 @@
                 background-color: lighten($grey-base, 8%);
             }
             &:active{
-                border-color: $white-base;
+                background-color: lighten($grey-base, 5%);
             }
         }
+    }
+}
+
+.app_body,
+.app_header,
+.app_footer {
+    position: relative;
+    transition: 0.2s ease-in;
+    left: 0;
+}
+
+#off_canvas_toggle:checked {
+    left: 250px;
+    transition: 0.2s ease-in;
+    & ~ .app_body,
+    & ~ .app_header,
+    & ~ .app_footer,
+    & ~ label {
+        left: 250px;
+        transition: 0.2s ease-in;
+    }
+    & ~ label {
+        left: calc(250px + 1rem);
+    }
+    & ~ .app_header .app_nav {
+        left: 0 ;
+        transition: 0.2s ease-in;
     }
 }

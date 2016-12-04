@@ -4,3 +4,10 @@ body {
     font-size: $font-size-base;
     height: 100%;
 }
+
+.app_footer {
+    p {
+        margin: 0;
+        padding: 0.5rem 0;  
+    }
+}

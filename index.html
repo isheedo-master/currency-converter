@@ -11,14 +11,17 @@
     </head>
     <body>
         <!-- app header -->
+        <input type="checkbox" name="off_canvas_toggle" id="off_canvas_toggle">
+        <label for="off_canvas_toggle">
+            <span id="toggle_icon"></span>
+        </label>
         <header class="app_header">
             <h1 class="app_branding text_upper">Converter</h1>
             <nav class="app_nav">
                 <ul id="nav_pills"><li class="active" id="AUD-USD" data-from-curr="AUD" data-to-curr="USD" data-ratio="0.78" data-from-icon="https://s3-ap-southeast-2.amazonaws.com/ubiquity-utilities/frontend_test/flags/au.png" data-to-icon="https://s3-ap-southeast-2.amazonaws.com/ubiquity-utilities/frontend_test/flags/us.png">AUD &gt; USD</li><li id="USD-ASD" data-from-curr="USD" data-to-curr="ASD" data-ratio="1.29" data-from-icon="https://s3-ap-southeast-2.amazonaws.com/ubiquity-utilities/frontend_test/flags/us.png" data-to-icon="https://s3-ap-southeast-2.amazonaws.com/ubiquity-utilities/frontend_test/flags/au.png">USD &gt; AUD</li><li id="AUD-GBP" data-from-curr="AUD" data-to-curr="GBP" data-ratio="0.5" data-from-icon="https://s3-ap-southeast-2.amazonaws.com/ubiquity-utilities/frontend_test/flags/au.png" data-to-icon="https://s3-ap-southeast-2.amazonaws.com/ubiquity-utilities/frontend_test/flags/uk.png">AUD &gt; GBP</li><li id="GBP-AUD" data-from-curr="GBP" data-to-curr="AUD" data-ratio="1.99" data-from-icon="https://s3-ap-southeast-2.amazonaws.com/ubiquity-utilities/frontend_test/flags/uk.png" data-to-icon="https://s3-ap-southeast-2.amazonaws.com/ubiquity-utilities/frontend_test/flags/au.png">GBP &gt; AUD</li></ul>
             </nav>
         </header>
-        <section>
-
+        <section class="app_body">
         <!-- input wrapper -->
         <div id="input_wrapper">
             <div class="input" id="convert_from">
