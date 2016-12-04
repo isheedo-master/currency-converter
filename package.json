@@ -1,0 +1,40 @@
+{
+  "name": "currency-converter",
+  "version": "1.0.0",
+  "description": "Simple currency converter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'Done'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isheedo-master/currency-converter.git"
+  },
+  "keywords": [
+    "js",
+    "converter",
+    "html",
+    "sass"
+  ],
+  "author": "Ivan Sumlikin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isheedo-master/currency-converter/issues"
+  },
+  "homepage": "https://github.com/isheedo-master/currency-converter#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-livereload": "^3.8.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1"
+  }
+}
